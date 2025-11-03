@@ -7,6 +7,7 @@ y el objetivo del mismo. Pasemos a la próxima slide.*/
 LABORATORIO. En el caso de que la base de
 datos exista previamente, eliminarla antes de
 iniciar el laboratorio.*/
+DROP DATABASE IF EXISTS LABORATORIO;
 CREATE DATABASE LABORATORIO;
 
 /*2. Pon en uso la base de datos generada en el
@@ -76,7 +77,7 @@ contenidas dentro de la base de datos
 LABORATORIO.*/
 
 /*9. Describe la estructura de la tabla CLIENTES.*/
-DESC CLIENTES;
+DESCRIBE CLIENTES;
 
 #<-------------Etapa 1.2------------->
 /*1. Modifica la tabla FACTURAS tomando en
@@ -114,6 +115,7 @@ ALTER TABLE ARTICULOS
     MODIFY Nombre VARCHAR(75),
     MODIFY Precio DOUBLE UNSIGNED NOT NULL,
     MODIFY Stock INT UNSIGNED NOT NULL;
+DESCRIBE ARTICULOS;
 ALTER TABLE ARTICULOS MODIFY IDArticulo INT PRIMARY KEY;
 
 /*3. Modifica la tabla CLIENTES. Toma en cuenta
@@ -151,6 +153,7 @@ SELECT * FROM FACTURAS;
 
 /*2. Carga 4 registros en la tabla ARTÍCULOS,
 tal como se detallan a continuación:*/
+SELECT * FROM ARTICULOS;
 INSERT INTO ARTICULOS VALUES
 	(95,'Webcam con Micrófono Plug & Play', 513.35, 39),
     (157, 'Apple AirPods Pro', 979.75, 152),
